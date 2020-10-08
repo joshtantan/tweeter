@@ -1,7 +1,3 @@
-$(document).ready(function() {
-  console.log('DOC loaded & ready');
-});
-
 $('#tweet-text').on('input', function() {
   const charsRemaining = 140 - $(this).val().length;
   const charCounter = $(this).parent().children('div').children('output.counter');

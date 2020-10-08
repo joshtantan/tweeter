@@ -8,6 +8,10 @@ section.tweet-container {
   border-style: solid
 }
 
+section.tweet-container:hover {
+  font-weight: 900;
+}
+
 section.tweet-container header {
   width: 100%;
   padding: 0.5em;

@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
+const tweetData = [
   {
     "user": {
       "name": "Newton",
@@ -30,13 +30,35 @@ const data = [
 ]
 
 const renderTweets = function(tweets) {
-// loops through tweets
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
+  for (const tweet of tweets) {
+    const $tweet = createTweetElement(tweet);
+    const tweetsContainer = $('section.tweet-container'); 
+    tweetsContainer.prepend($tweet);
+  }
 }
 
 const createTweetElement = function(tweet) {
-  let $tweet = 5;
+  let $tweet = `
+    <article class="tweet">
+      <header>
+        <span>${tweet.user.name}</span>
+        <span class=user-handle>${tweet.user.handle}</span>
+      </header>
+
+      <p>${tweet.content.text}</p>
+
+      <footer>
+        <span>${tweet.created_at}</span>
+        <div>
+          <button type="submit">A</button>
+          <button type="submit">B</button>
+          <button type="submit">C</button>
+        </div>
+      </footer>
+    </article>
+  `;
+
+  return $tweet;
 }
 
-renderTweets(data);
+renderTweets(tweetData);

@@ -1,10 +1,11 @@
 body > header {
   height: 400px;
   width: 100%;
+  margin-top: 15%;
+  background-color: #e3aa00;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #e3aa00;
   background-image: url('../images/3px-tile.png')
 }

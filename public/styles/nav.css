@@ -2,12 +2,15 @@ nav {
   height: 120px;
   width: 100vw;
   padding: 1.5em;
+  font-size: 20px;
+  top: 0;
+  background-color: #4056A1;
+  color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  font-size: 20px;
-  background-color: #4056A1;
-  color: #FFFFFF
+  overflow: hidden;
+  position: fixed;
 }
 
 nav .nav-brand {

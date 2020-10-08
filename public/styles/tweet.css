@@ -12,6 +12,15 @@ section.tweet-container:hover {
   font-weight: 900;
 }
 
+section.tweet-container article.tweet {
+  width: 100%;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 section.tweet-container header {
   width: 100%;
   padding: 0.5em;
@@ -25,7 +34,7 @@ section.tweet-container span.user-handle {
   color: rgb(173, 173, 173)
 }
 
-section.tweet-container article {
+section.tweet-container p {
   width: 100%;
   padding: 0.5em;
   display: flex;

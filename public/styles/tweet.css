@@ -1,0 +1,40 @@
+section.tweet-container {
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: solid
+}
+
+section.tweet-container header {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end
+}
+
+section.tweet-container span.user-handle {
+  color: rgb(173, 173, 173)
+}
+
+section.tweet-container article {
+  width: 100%;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-style: none none solid none
+}
+
+section.tweet-container footer {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}

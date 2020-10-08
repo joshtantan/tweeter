@@ -1,4 +1,4 @@
-header {
+body > header {
   height: 400px;
   width: 100%;
   display: flex;
@@ -6,5 +6,5 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #e3aa00;
-  background-image: url('../images/3px-tile.png');
+  background-image: url('../images/3px-tile.png')
 }

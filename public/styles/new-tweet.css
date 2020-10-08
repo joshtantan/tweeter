@@ -1,4 +1,11 @@
+section.new-tweet > h2 {
+  padding: 5px;
+  margin: 5px;
+}
+
 form {
+  padding: 5px;
+  margin: 5px;
   display: flex;
   flex-direction: column
 }
@@ -8,7 +15,7 @@ form label {
 }
 
 form textarea {
-  margin-bottom: 2vh;
+  margin-bottom: 2vh
 }
 
 form div {

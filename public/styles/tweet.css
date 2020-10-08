@@ -4,21 +4,22 @@ section.tweet-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  border-style: solid
+  align-items: center
 }
 
-section.tweet-container:hover {
+section.tweet-container article.tweet:hover {
   font-weight: 900;
 }
 
 section.tweet-container article.tweet {
   width: 100%;
   padding: 0.5em;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-style: solid
 }
 
 section.tweet-container header {

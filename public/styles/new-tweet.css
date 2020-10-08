@@ -1,0 +1,19 @@
+form {
+  display: flex;
+  flex-direction: column
+}
+
+form label {
+  margin-bottom: 3vh
+}
+
+form textarea {
+  margin-bottom: 2vh;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive
+}

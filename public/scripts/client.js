@@ -32,6 +32,9 @@ const renderTweets = function(tweets) {
 }
 
 const createTweetElement = function(tweet) {
+  let datetime = new Date(tweet.created_at);
+  datetime = datetime.toUTCString();
+
   let $tweet = `
     <article class="tweet">
       <header>
@@ -47,7 +50,7 @@ const createTweetElement = function(tweet) {
       <p>${tweet.content.text}</p>
 
       <footer>
-        <span>${tweet.created_at}</span>
+        <span>${datetime}</span>
         <div>
           <button type="submit">A</button>
           <button type="submit">B</button>

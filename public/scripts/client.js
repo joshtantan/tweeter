@@ -51,6 +51,7 @@ $("form").submit(function(event) {
   errorNode.hide('fast');
   const tweetContent = inputTextArea.val();
 
+  // Conditionally show error banner or post tweet
   if (tweetContent.length == 0) {
     errorNode.text('Error: Cannot submit empty tweet');
     errorNode.slideDown('slow');

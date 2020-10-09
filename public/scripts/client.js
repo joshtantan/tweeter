@@ -47,9 +47,18 @@ const createTweetElement = function(tweet) {
 
 $("form").submit(function(event) {
   const inputTextArea = $(this).children('textarea');
-  const tweetContent = inputTextArea.serialize();
-  $.ajax('/tweets', {method: 'POST', data: tweetContent});
-  inputTextArea.val('');
+  const tweetContent = inputTextArea.val();
+
+  if (tweetContent.length == 0) {
+    alert('Error: Cannot submit empty tweet');
+  } else if (tweetContent.length > 140) {
+    alert('Error: Cannot submit tweet over the 140 character limit');
+  } else {
+    const tweetContentSerialized = inputTextArea.serialize();
+    $.ajax('/tweets', {method: 'POST', data: tweetContentSerialized});
+    inputTextArea.val('');
+  }
+
   event.preventDefault();
 });
 

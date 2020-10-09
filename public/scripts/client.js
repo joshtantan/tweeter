@@ -46,6 +46,7 @@ const createTweetElement = function(tweet) {
 }
 
 $("form").submit(function(event) {
+  event.preventDefault();
   const inputTextArea = $(this).children('textarea');
   const tweetContent = inputTextArea.val();
 
@@ -54,18 +55,23 @@ $("form").submit(function(event) {
   } else if (tweetContent.length > 140) {
     alert('Error: Cannot submit tweet over the 140 character limit');
   } else {
-    const tweetContentSerialized = inputTextArea.serialize();
-    $.ajax('/tweets', {method: 'POST', data: tweetContentSerialized});
-    inputTextArea.val('');
+    const escape = function(str) {
+      let div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
 
-    $.ajax('/tweets', { method: 'GET' })
-    .then(function (res) {
-      const latestTweet = [res[res.length - 1]];
-      renderTweets(latestTweet);
+    const safeText = escape(tweetContent);
+    $.ajax('/tweets', {method: 'POST', data: {text: safeText}})
+    .then(function(tweet) {
+      renderTweets([tweet]);
+    })
+    .catch(err => {
+      alert(`Error: ${err.responseJSON.error}`);
     });
-  }
 
-  event.preventDefault();
+    inputTextArea.val('');
+  }
 });
 
 loadTweets();

@@ -48,12 +48,16 @@ const createTweetElement = function(tweet) {
 $("form").submit(function(event) {
   event.preventDefault();
   const inputTextArea = $(this).children('textarea');
+  const errorNode = $(this).siblings('p');
+  errorNode.hide('fast');
   const tweetContent = inputTextArea.val();
 
   if (tweetContent.length == 0) {
-    alert('Error: Cannot submit empty tweet');
+    errorNode.text('Error: Cannot submit empty tweet');
+    errorNode.slideDown('slow');
   } else if (tweetContent.length > 140) {
-    alert('Error: Cannot submit tweet over the 140 character limit');
+    errorNode.text('Error: Cannot submit tweet over the 140 character limit');
+    errorNode.slideDown('slow');
   } else {
     const escape = function(str) {
       let div = document.createElement('div');

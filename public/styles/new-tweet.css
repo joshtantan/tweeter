@@ -24,3 +24,8 @@ form div {
   justify-content: space-between;
   font-family: 'Bungee', cursive
 }
+
+#error-banner {
+  display: none;
+  background-color: #FF0000
+}

@@ -1,7 +1,7 @@
 const loadTweets = function() {
   $.ajax('/tweets', { method: 'GET' })
-  .then(function (jsonRes) {
-    renderTweets(jsonRes);
+  .then(function (res) {
+    renderTweets(res);
   });
 }
 
@@ -57,6 +57,12 @@ $("form").submit(function(event) {
     const tweetContentSerialized = inputTextArea.serialize();
     $.ajax('/tweets', {method: 'POST', data: tweetContentSerialized});
     inputTextArea.val('');
+
+    $.ajax('/tweets', { method: 'GET' })
+    .then(function (res) {
+      const latestTweet = [res[res.length - 1]];
+      renderTweets(latestTweet);
+    });
   }
 
   event.preventDefault();

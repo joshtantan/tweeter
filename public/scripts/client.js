@@ -33,9 +33,9 @@ const createTweetElement = function(tweet) {
       <footer>
         <span>${datetime}</span>
         <div>
-          <button type="submit">A</button>
-          <button type="submit">B</button>
-          <button type="submit">C</button>
+          <button type="submit">🚩</button>
+          <button type="submit">🔁</button>
+          <button type="submit">👍</button>
         </div>
       </footer>
     </article>

@@ -27,8 +27,16 @@ section.tweet-container header {
   padding: 0.5em;
   font-size: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end
+  justify-content: space-between
+}
+
+section.tweet-container div.user-name-avatar {
+  display: flex;
+  justify-content: space-between
+}
+
+section.tweet-container span {
+  padding: 0.25em;
 }
 
 section.tweet-container span.user-handle {
@@ -38,9 +46,8 @@ section.tweet-container span.user-handle {
 section.tweet-container p {
   width: 100%;
   padding: 0.5em;
+  margin: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   border-style: none none solid none
 }
 
@@ -49,6 +56,5 @@ section.tweet-container footer {
   padding: 0.5em;
   font-size: 10px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between
 }

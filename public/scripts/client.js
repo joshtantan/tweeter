@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 const tweetData = [
   {
     "user": {
@@ -41,8 +35,13 @@ const createTweetElement = function(tweet) {
   let $tweet = `
     <article class="tweet">
       <header>
-        <span>${tweet.user.name}</span>
-        <span class=user-handle>${tweet.user.handle}</span>
+        <div class="user-name-avatar">
+          <span>
+            <img src="${tweet.user.avatars}"> 
+          </span>
+          <span>${tweet.user.name}</span>
+        </div>
+        <span class="user-handle">${tweet.user.handle}</span>
       </header>
 
       <p>${tweet.content.text}</p>

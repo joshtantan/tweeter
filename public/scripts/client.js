@@ -14,8 +14,7 @@ const renderTweets = function(tweets) {
 }
 
 const createTweetElement = function(tweet) {
-  let datetime = new Date(tweet.created_at);
-  datetime = datetime.toUTCString();
+  const datetime = moment(tweet.created_at).fromNow();
 
   let $tweet = `
     <article class="tweet">

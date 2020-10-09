@@ -1,7 +1,7 @@
 $('#tweet-text').on('input', function() {
   const charsRemaining = 140 - $(this).val().length;
   const charCounter = $(this).parent().children('div').children('output.counter');
-  charCounter.html(charsRemaining);
+  charCounter.val(charsRemaining);
 
   if (charsRemaining < 0) {
     charCounter.css('color', '#FF0000');

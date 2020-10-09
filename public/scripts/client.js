@@ -46,8 +46,10 @@ const createTweetElement = function(tweet) {
 }
 
 $("form").submit(function(event) {
-  const tweetContent = $(this).children('textarea').serialize();
+  const inputTextArea = $(this).children('textarea');
+  const tweetContent = inputTextArea.serialize();
   $.ajax('/tweets', {method: 'POST', data: tweetContent});
+  inputTextArea.val('');
   event.preventDefault();
 });
 

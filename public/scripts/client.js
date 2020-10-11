@@ -51,33 +51,35 @@ $("form").submit(function(event) {
   errorNode.hide('fast');
   const tweetContent = inputTextArea.val();
 
-  // Conditionally show error banner or post tweet
+  // Show error banner if tweet is invalid
   if (tweetContent.length == 0) {
     errorNode.text('Error: Cannot submit empty tweet');
     errorNode.slideDown('slow');
+    return;
   } else if (tweetContent.length > 140) {
     errorNode.text('Error: Cannot submit tweet over the 140 character limit');
     errorNode.slideDown('slow');
-  } else {
-    const escape = function(str) {
-      let div = document.createElement('div');
-      div.appendChild(document.createTextNode(str));
-      return div.innerHTML;
-    }
-
-    const safeText = escape(tweetContent);
-    $.ajax('/tweets', {method: 'POST', data: {text: safeText}})
-    .then(function(tweet) {
-      renderTweets([tweet]);
-    })
-    .catch(err => {
-      alert(`Error: ${err.responseJSON.error}`);
-    });
-
-    inputTextArea.val('');
-    const charCounter = inputTextArea.siblings('div').children('output.counter');
-    charCounter.val(140);
+    return;
   }
+
+  const escape = function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+  const safeText = escape(tweetContent);
+  $.ajax('/tweets', {method: 'POST', data: {text: safeText}})
+  .then(function(tweet) {
+    renderTweets([tweet]);
+  })
+  .catch(err => {
+    alert(`Error: ${err.responseJSON.error}`);
+  });
+
+  inputTextArea.val('');
+  const charCounter = inputTextArea.siblings('div').children('output.counter');
+  charCounter.val(140);
 });
 
 loadTweets();

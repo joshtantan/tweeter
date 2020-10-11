@@ -4,7 +4,11 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
 
-!["Introduction GIF"](https://github.com/joshtantan/tweeter/blob/master/docs/intro.gif)
+### Desktop View
+!["Desktop Intro GIF"](https://github.com/joshtantan/tweeter/blob/master/docs/desktop_intro.gif)
+
+### Mobile View
+!["Mobile Intro GIF"](https://github.com/joshtantan/tweeter/blob/master/docs/mobile_intro.gif)
 
 ## Dependencies
 

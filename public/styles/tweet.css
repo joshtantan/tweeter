@@ -19,7 +19,7 @@ section.tweet-container article.tweet {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-style: solid
+  border-style: solid;
 }
 
 section.tweet-container header {
@@ -27,12 +27,12 @@ section.tweet-container header {
   padding: 0.5em;
   font-size: 20px;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 section.tweet-container div.user-name-avatar {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 section.tweet-container span {
@@ -40,7 +40,7 @@ section.tweet-container span {
 }
 
 section.tweet-container span.user-handle {
-  color: rgb(173, 173, 173)
+  color: rgb(173, 173, 173);
 }
 
 section.tweet-container p {
@@ -48,7 +48,7 @@ section.tweet-container p {
   padding: 0.5em;
   margin: 0;
   display: flex;
-  border-style: none none solid none
+  border-style: none none solid none;
 }
 
 section.tweet-container footer {

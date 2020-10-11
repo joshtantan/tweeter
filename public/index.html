@@ -47,30 +47,32 @@
       <span><b>Write</b> a new tweet</span>
     </nav>
 
-    <header>
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <div>
-          <h2>Joshua Tan</h2>
-      </div>
-    </header>
+    <div class="dynamic-view-elements">
+      <header class="profile-box">
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <div>
+            <h2>Joshua Tan</h2>
+        </div>
+      </header>
 
-    <main class="container">
-      <section class="new-tweet">
-        <p id="error-banner"></p>
-        <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
+      <main class="container">
+        <section class="new-tweet">
+          <p id="error-banner"></p>
+          <h2>Compose Tweet</h2>
+          <form method="POST" action="/tweets">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
 
-      <section class="tweet-container"></section>
-    </main>
+        <section class="tweet-container"></section>
+      </main>
+    </div>
   </body>
 </html>

@@ -75,6 +75,8 @@ $("form").submit(function(event) {
     });
 
     inputTextArea.val('');
+    const charCounter = inputTextArea.siblings('div').children('output.counter');
+    charCounter.val(140);
   }
 });
 

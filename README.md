@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a front end SPA (single-page application) Twitter clone that uses AJAX requests in Express to pull and push tweet data that is rendered responsively through the use of jQuery.
 
 ## Final Product
 
@@ -12,7 +12,7 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Dependencies
 
-- Node.js
+- Node
 - Body-Parser
 - Express
 - Chance
@@ -20,5 +20,12 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Getting Started
 
-- Install all dependencies (using the `npm i` command while in the project root directory).
-- Run the development web server using the `npm start` command.
+> All commands are run from the project root directory
+1. Install all dependencies before first use
+```shell
+$ npm i
+```
+- Start the web server
+```shell
+$ npm start
+```

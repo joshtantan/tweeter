@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a front end Twitter clone that allows users to read and post tweets on a SPA (single-page application), using AJAX requests in Express to pull and push tweet data that is rendered responsively through the use of jQuery.
+Tweeter is a front end Twitter clone that allows users to read and post tweets on a SPA, using AJAX requests in Express to pull and push tweet data that is rendered responsively through the use of jQuery.
 
 ## Final Product
 
